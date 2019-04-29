@@ -9,9 +9,9 @@ public class JSONPlaceholderAPI {
         this.url = url;
     }
 
-    public String get_posts() throws IOException{
+    public String getPosts() throws IOException{
         Posts p = new Posts(this.url);
-        return p.get_posts();
+        return p.getPosts();
     }
 }
 
@@ -23,7 +23,7 @@ class Posts {
         this.url = base_url.concat("posts/");
     }
 
-    String get_posts() throws IOException {
+    String getPosts() throws IOException {
         HttpURLConnection connection = this.establish_connection();
         BufferedReader httpReader =
                 new BufferedReader(new InputStreamReader(connection.getInputStream()));

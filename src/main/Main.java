@@ -20,7 +20,7 @@ public class Main {
     }
 
     private static JsonArray getPostsJson(JSONPlaceholderAPI api) throws IOException {
-        JsonReader jsonReader = Json.createReader(new StringReader(api.get_posts()));
+        JsonReader jsonReader = Json.createReader(new StringReader(api.getPosts()));
         JsonArray postsJson = jsonReader.readArray();
         jsonReader.close();
         return postsJson;
